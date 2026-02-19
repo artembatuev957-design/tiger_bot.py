@@ -1,5 +1,17 @@
-FROM python:3.10
+# Используем официальный образ Python
+FROM python:3.9-slim
+
+# Устанавливаем рабочую папку
 WORKDIR /app
-COPY . .
+
+# Копируем список зависимостей
+COPY requirements.txt .
+
+# Устанавливаем библиотеки
 RUN pip install --no-cache-dir -r requirements.txt
-CMD ["python", "tiger_bot.py"]
+
+# Копируем основной код бота
+COPY tiger_bot.py .
+
+# Команда для запуска (используем полный путь для надежности)
+CMD ["python3", "tiger_bot.py"]
