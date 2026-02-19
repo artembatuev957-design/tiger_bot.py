@@ -9,7 +9,7 @@ import uuid
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # --- 1. НАСТРОЙКИ (ТВОИ КЛЮЧИ) ---
-TOKEN = '8452228553:AAHhIdVrTxs7R2AcmRg1m-0CU0J3YEguoiI'
+TOKEN = '8452228553:AAGzx0XbxV46TnEBuzOzd4_elZ1K_URcU2w'
 YANDEX_API_KEY = 'AQVN3XxOIh9d4lm4DIrN4R9-dFx8L4Qc1XeWcgYd'
 FOLDER_ID = 'b1g63urksn5r48sftd80'
 WEATHER_API = '5c9a7eb45c7040dfef95ed49a576f363'
@@ -174,6 +174,7 @@ def handle_tiger_text(message):
             bot.reply_to(message, f"🐯 {result}")
     else:
         bot.reply_to(message, "🐯 Выбери режим кнопкой в меню! 😉")
+
 
 
 bot.infinity_polling()
